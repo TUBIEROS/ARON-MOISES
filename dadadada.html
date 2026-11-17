@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Student Portal</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- 1. RESPONSIVE NAVBAR WITH WORKING MOBILE TOGGLER -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">RICHWELL COLLEGES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#dashboard">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mysubjects">My Subjects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#grades">Grades & Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container my-4">
+
+    <!-- 2. CONTAINER AND GRID BASED DASHBOARD LAYOUT -->
+    <section id="dashboard" class="mb-5">
+      <h1 class="h3 mb-4 text-dark fw-bold">Student Dashboard</h1>
+      
+      <div class="row g-4">
+        
+        <!-- 3. CARDS: PROFILE (Col: 100% mobile, 33.3% tablet/desktop) -->
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100 border-0">
+            <div class="card-body text-center">
+              <img src="https://via.placeholder.com/100" alt="Student Avatar" class="rounded-circle mb-3 border p-1" width="90">
+              <h5 class="card-title fw-bold">TUBIEROS, ARON MOISES</h5>
+              <p class="text-muted small mb-2">ID: 2026-89421</p>
+              <span class="badge bg-success mb-3">Active Standing (95%)</span>
+              <ul class="list-group list-group-flush text-start small">
+                <li class="list-group-item"><strong>Course:</strong> BSIS</li>
+                <li class="list-group-item"><strong>Year Level:</strong> 1st Year</li>
+                <li class="list-group-item text-success fw-bold"><strong>General Average:</strong> 1.25 (Dean's Lister)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. CARDS: ANNOUNCEMENTS (Col: 100% mobile, 66.6% tablet/desktop) -->
+        <div class="col-12 col-md-8">
+          <div class="card shadow-sm h-100 border-0">
+            <div class="card-header bg-white fw-bold py-3">Announcements</div>
+            <div class="card-body">
+              <div class="mb-3 border-bottom pb-2">
+                <h6 class="text-primary mb-1">Midterm Examination Schedule Released</h6>
+                <p class="small text-muted mb-0">Exams begin on Monday. Check your subject portals for exact room assignments and time slots.</p>
+              </div>
+              <div>
+                <h6 class="text-primary mb-1">Enrollment for Summer Term Opens Soon</h6>
+                <p class="small text-muted mb-0">Advising sessions start next Wednesday via virtual meeting links.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEW SECTION: MY SUBJECTS (Enrolled Class Schedule) -->
+    <section id="mysubjects" class="mb-5">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-white fw-bold py-3 d-flex justify-content-between align-items-center">
+          <span>My Enrolled Subjects & Schedules</span>
+          <span class="badge bg-secondary">Current Semester</span>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Subject Code</th>
+                  <th>Description</th>
+                  <th>Units</th>
+                  <th>Schedule</th>
+                  <th>Room</th>
+                  <th>Instructor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold text-primary">VALED 101</td>
+                  <td>Values Education</td>
+                  <td>3.0</td>
+                  <td>Mon / Wed (8:00 AM - 9:30 AM)</td>
+                  <td>Room 302</td>
+                  <td>MAA'M ARRIANE</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary">MMW 101</td>
+                  <td>Mathematics in the Modern World</td>
+                  <td>3.0</td>
+                  <td>Mon / Wed (10:00 AM - 11:30 AM)</td>
+                  <td>Room 405</td>
+                  <td>MAAM ARA</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary">FIL 102</td>
+                  <td>Malikhaing Pagsulat</td>
+                  <td>3.0</td>
+                  <td>Tue / Thu (1:00 PM - 2:30 PM)</td>
+                  <td>Room 201</td>
+                  <td>Prof. Michelle</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CARDS: SUBJECTS ENROLLED & GRADES / PROGRESS -->
+    <section id="grades" class="mb-5">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-white fw-bold py-3">Grades & Course Progress</div>
+        <div class="card-body">
+          <div class="row g-3">
+            
+            <!-- Subject 1 -->
+            <div class="col-md-4">
+              <div class="p-3 border rounded bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h6 class="fw-bold mb-0">Val.Ed</h6>
+                  <span class="badge bg-primary">Grade: 1.25</span>
+                </div>
+                <p class="small text-muted mb-2">MAA'M ARRIANE</p>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted mt-1 d-block">Completion: 85%</small>
+              </div>
+            </div>
+
+            <!-- Subject 2 -->
+            <div class="col-md-4">
+              <div class="p-3 border rounded bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h6 class="fw-bold mb-0">MMW</h6>
+                  <span class="badge bg-primary">Grade: 1.50</span>
+                </div>
+                <p class="small text-muted mb-2">MAAM ARA</p>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted mt-1 d-block">Completion: 60%</small>
+              </div>
+            </div>
+
+            <!-- Subject 3 -->
+            <div class="col-md-4">
+              <div class="p-3 border rounded bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h6 class="fw-bold mb-0">MALIKHAING PAGSULAT</h6>
+                  <span class="badge bg-primary">Grade: 1.00</span>
+                </div>
+                <p class="small text-muted mb-2">Prof. Michelle</p>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted mt-1 d-block">Completion: 92%</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ACCESSIBLE BOOTSTRAP REGISTRATION FORM -->
+    <section id="register" class="card shadow-sm border-0 p-4 mb-5">
+      <h2 class="h4 fw-bold mb-3">Course Registration Form</h2>
+      <p class="text-muted small">Fill out the accessible form below to add a new elective subject for the upcoming term.</p>
+      
+      <form class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="fullName" class="form-label fw-semibold">Full Name</label>
+            <input type="text" class="form-control" id="fullName" required aria-describedby="nameHelp">
+            <div class="invalid-feedback">Please enter your full name.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="studentEmail" class="form-label fw-semibold">Student Email</label>
+            <input type="email" class="form-control" id="studentEmail" required placeholder="name@university.edu">
+            <div class="invalid-feedback">Please provide a valid university email address.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="electiveSelect" class="form-label fw-semibold">Choose Courses</label>
+            <select class="form-select" id="electiveSelect" required>
+              <option selected disabled value="">Choose Course</option>
+              <option value="ai">BSAIS</option>
+              <option value="cyber">BSIS</option>
+              <option value="cloud">BSENTREP</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid elective.</div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+              <label class="form-check-label" for="termsCheck">
+                I agree to the academic policies and prerequisite requirements.
+              </label>
+              <div class="invalid-feedback">You must agree before submitting.</div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary px-4 py-2" type="submit">Submit Registration</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white text-center py-3 border-top small text-muted">
+    <p class="mb-0">© 2026 Student Portal System. Tested at Phone, Tablet & Desktop Widths.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle CDN (Required for Navbar Toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Form Validation Script -->
+  <script>
+    (function () {
+      'use strict'
+      var forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
+</html>
